@@ -76,7 +76,7 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
         
     }
     
-    func updateAfterFirstLogin () {
+    @objc func updateAfterFirstLogin () {
         
         loginButton.isHidden = true
         let userDefaults = UserDefaults.standard
@@ -98,7 +98,7 @@ class MainViewController: UIViewController, SPTAudioStreamingPlaybackDelegate, S
     func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
         // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
        print("logged in")
-            self.player?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+            self.player?.playSpotifyURI("spotify:track:3zNbTqsZZXx59UChf3QebD", startingWith: 0, startingWithPosition: 0, callback: { (error) in
                 if (error != nil) {
                     print("playing!")
                 }
